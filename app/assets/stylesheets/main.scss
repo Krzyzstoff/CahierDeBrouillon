@@ -1,0 +1,178 @@
+/* import the CSS framework */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* MAIN */
+
+html, body{
+  height: 100%;
+  background-image: image-url('Background.jpg');
+}
+
+body {
+  height: calc(100% - 80px) !important;
+
+}
+
+main {
+  color: #fff;
+  font-family: 'Futura';
+  font-size: 14pt;
+  width: 100%;
+  margin-top: 80px; // accommodate the navbar
+  padding: 0 0 150px 0;
+  min-height: 100vh;
+}
+
+img {
+  margin: 0 auto;
+}
+
+#wrap {
+  min-height: 100vh;
+  font-family: 'Futura'
+}
+
+.white > main {
+  color: #000;
+}
+
+.white {
+  background-image: image-url('BackgroundWhite.jpg');
+}
+
+/* NAV */
+
+@font-face {
+  font-family: "Apercu-Bold";
+  src:url('apercu-bold-webfont.ttf') format("truetype");
+}
+
+.navbar-nav{
+    float:none;
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+}
+
+.navbar {
+    background-color: #fff !important;
+    border: none;
+    min-height: 80px !important;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    min-height: 80px;
+    line-height: 80px;
+    padding: 0 25px;
+    color: #000;
+    font-size: 18px;
+    font-family: "Apercu-Bold";
+} 
+
+.navbar-nav>li>a:hover {
+    color: #000 !important;
+    text-decoration: underline;
+}
+
+.nav-border {
+    min-width: 100%;
+    min-height: 10px;
+    background:
+        linear-gradient(-135deg, #fff 5px, transparent 5px),
+        linear-gradient(135deg, #fff 5px, transparent 5px);  
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    background-size:
+      10px 10px,
+      10px 10px;
+    
+    position: fixed;
+    top: 80px !important;
+    z-index: 100;
+}
+
+.active > a{
+    text-decoration: underline; 
+    background-color: #FFF !important;
+    color: #000 !important;
+}
+
+.navbar-brand {
+  font-size: inherit;
+  height: 80px;
+  padding: 5px;
+  }
+
+.navLogo {
+  max-height: 90%;
+}
+
+
+/* FOOTER */
+
+.footer {
+  position: relative;
+  margin-top: -160px; /* negative value of footer height */
+  height: 160px;
+  clear:both;
+}
+
+.border-footer {
+	min-width: 100%;
+    min-height: 10px;
+    background:
+        linear-gradient(-45deg, #fff 5px, transparent 5px),
+        linear-gradient(45deg, #fff 5px, transparent 5px);  
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    background-size:
+      10px 10px,
+      10px 10px;
+}
+
+.foot-white {
+	height: 90px;
+	background-color: #fff;
+	width: 100%;
+  background-image: image-url('brushstrokeBlack.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75%;
+}
+
+.foot-trans {
+	height: 60px;
+	color: #fff;
+	text-align: center;
+	line-height: 60px;
+	font-size: 9px; 
+  background-image: image_url('Background.jpg')
+}
+
+.logo-foot {
+  display: block;
+  background-color: #fff;
+  padding-top: 26px;
+  margin: 0 auto;
+}
+
+/* FORMS en LINKS */
+
+.authform, input, textarea, .modal-dialog {
+  color: #000;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+}
+
+a{
+  color: #a24800;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #EE7718;
+}

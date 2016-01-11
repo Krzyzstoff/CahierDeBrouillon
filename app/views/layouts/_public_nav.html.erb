@@ -1,0 +1,7 @@
+<li class="<%= active_class("/index") %>"><a href="/index">Home</a></li>
+<li class="<%= active_class(agenda_path) %>"><%= link_to 'Agenda', agenda_path(:year => Date.today.strftime("%Y"), :anchor => Date.today.strftime("%B")) %></li>
+<li class="<%= active_class("/contact") %>"><a href="/contact">Contact</a></li>
+<li class="<%= active_class(albums_path) %>"><%= link_to 'Foto', albums_path %></li>
+<li> <a href="" data-toggle="modal" data-target="#myModal">Nieuwsbrief</a>
+</li>
+

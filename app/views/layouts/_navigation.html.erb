@@ -1,0 +1,34 @@
+<%# navigation styled for Bootstrap 3.0 %>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="/index">
+        <%= image_tag "logo_black.png", {:class=>"navLogo"} %>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <% if user_signed_in? %>
+          <%= render 'layouts/inteam_nav' %>
+        <% else %>
+          <% if current_page?('/users/sign_in') %>
+            <li><a href="/index">TERUG</a></li>
+          <% else %>
+            <%= render 'layouts/public_nav' %>
+          <% end %>
+        <% end %>  
+      </ul>
+
+      <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us3.list-manage.com","uuid":"10ad3cff20ffe9a2ac51a097f","lid":"cb4b152ee6"}) })</script>
+    </div>
+  </div>
+</nav>
+<div class='nav-border'>
+</div>

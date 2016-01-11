@@ -1,0 +1,52 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// INDEX
+
+.info {
+	padding-top: 60px;
+}
+
+#myCarousel {
+	padding-top: 50px;
+}
+
+.carousel-inner > .item {
+	max-height: 750px;
+	overflow: hidden;
+}
+
+// CONTACT
+
+
+.contact-block {
+	height: 50px;
+	background-color: #000;
+}
+
+.contact-title {
+	padding-left: 50px;
+	line-height: 50px;
+	margin: 0;
+	color: #fff;
+	font-size: 14pt;
+}
+
+.contact-context {
+	padding-top: 30px;
+	font-size: 12pt;
+}
+
+.border {
+	padding-top: 30px;
+	border-bottom: solid 1px;
+}
+
+// AGENDA
+
+.vCenter {
+	cursor: pointer; 
+	cursor: hand;
+}

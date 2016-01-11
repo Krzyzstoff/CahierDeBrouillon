@@ -1,0 +1,62 @@
+<div class="container">
+<% if user_signed_in? %>
+    <div class="col-md-1"></div>
+    <div class="col-md-11">
+      <h1>fotoAlbums</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-11">
+      <%= link_to 'Album toevoegen', new_album_path, :class => 'btn btn-default' %>     
+    </div>
+	</div>
+  <br>
+
+  <div><%= image_tag "brushstroke.png" %></div>
+<% end %>
+<br>
+
+<div class="row">
+    <div class="col-md-4"></div>  
+    <div class="col-md-1 vCenter">
+      <%= link_to image_tag("witL.png"), {:year => (@year.to_i - 1)} %>
+    </div>
+    <div class="col-md-2 vCenter" style="text-align: center">
+      <h2><%= @year %></h2>
+    </div>
+    <div class="col-md-1 vCenter">
+      <%= link_to image_tag("witR.png"), {:year => (@year.to_i + 1)} %>
+    </div>
+  </div>
+  
+
+    <% @albums.each do |album| %>
+    	<div class="row info">
+      	<div class="col-md-1"></div>
+      	<div class="col-md-2 photoTile">
+          <%= link_to (album) do %>
+            <div class="photoDate">
+              <%= album.date.strftime('%d/%m/%Y') if album.date %>
+            </div>
+            <div class="photoThumb">
+              <% album.photos.limit(1).each do |photo| %>
+                <%= image_tag(photo.photo) %>
+              <% end %>
+            </div>
+            <div class="photoTitle">
+              <%= album.title %>
+            </div>
+          <% end %>
+      	</div>
+
+      <% if user_signed_in? %>
+      	<div class="col-md-1">
+        	<%= link_to 'Verwijderen', album, method: :delete, data: { confirm: 'Zijde zeker?' }, :class => 'btn btn-default' %><br/>
+        	<%= link_to 'Aanpassen', edit_album_path(album), :class =>'btn btn-default' %>
+      	</div>      
+      <% end %>
+      </div>
+    <% end %>
+</div>

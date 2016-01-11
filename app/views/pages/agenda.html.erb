@@ -1,0 +1,73 @@
+<div class="container">
+	
+	<div class="row agenda">
+		<div class="col-md-1">	
+		</div>
+		<div class="col-md-11">
+			<div class="owl-carousel owl-agenda">
+				<% @events.each do |event| %>
+					<div>
+						<%= image_tag "TBA.png", :class => "tba", :data => {:hash => event.date.strftime("%B")} %>
+					  <%= image_tag event.affiche, :class => "a_Affiche" %>
+
+					  <%= link_to fetch_event_path(:id => event), {:class => "hAffiche", :remote => true } do%>
+					  	<%= image_tag "hoverAffiche.png" %>
+					  	<h1><%= event.date.strftime('%d/%m') %></h1>
+					  <% end %>
+				  </div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+
+	<br>
+
+	<div class="row">
+		<div class="col-md-4"></div>	
+		<div class="col-md-1 vCenter">
+ 			<a class="prev"><%= image_tag "witL.png" %></a>
+		</div>
+		<div class="col-md-2 vCenter">
+			<div class="owl-carousel owl-maand" style="text-align: center">
+				<h2 data-hash="January">januari</h2>
+				<h2 data-hash="February">februari</h2>
+				<h2 data-hash="March">maart</h2>
+				<h2 data-hash="April">april</h2>
+				<h2 data-hash="May">mei</h2>
+				<h2 data-hash="June">juni</h2>
+				<h2 data-hash="July">juli</h2>
+				<h2 data-hash="August">augustus</h2>
+				<h2 data-hash="September">september</h2>
+				<h2 data-hash="October">oktober</h2>
+				<h2 data-hash="November">november</h2>
+				<h2 data-hash="December">december</h2>
+			</div>
+		</div>
+		<div class="col-md-1 vCenter">
+ 			<a class="next"><%= image_tag "witR.png" %></a>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4"></div>	
+		<div class="col-md-1 vCenter">
+			<%= link_to image_tag("witL.png"), {:year => (@year.to_i - 1)} %>
+		</div>
+		<div class="col-md-2 vCenter" style="text-align: center">
+			<h2><%= @year %></h2>
+		</div>
+		<div class="col-md-1 vCenter">
+			<%= link_to image_tag("witR.png"), {:year => (@year.to_i + 1)} %>
+		</div>
+	</div>
+	<br>
+
+	<div><%= image_tag "brushstroke.png" %></div>
+	<br>
+
+<br>
+<br>
+<br>
+
+	</div>
+

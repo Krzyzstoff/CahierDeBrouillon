@@ -1,0 +1,2 @@
+module InteamHelper
+end

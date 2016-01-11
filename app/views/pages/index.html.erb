@@ -1,0 +1,80 @@
+<div class="container">
+	<div class="row info">
+		<div class="col-md-1">	
+		</div>
+		<div class="col-md-5">
+			<p><strong>Cahier de Brouillon</strong></p>
+			<p>is een muziekcafé dat al sinds 1981 muzikale en culturele prikkels stuurt doorheen gans de Noorderkempen. We bieden optredens van diverse genres zoals rock, pop, hardcore punk, hiphop, electronisch, jazz, ska en reggae tot Antilliaans en Afrikaans.</p>
+			<p>Het café is bovendien een uitstekende locatie voor fuiven. Check onze <strong>CARTE BLANCHE</strong>.</p>
+		</div>
+		<div class="col-md-1">	
+		</div>
+		<div class="col-md-5">
+			<p><strong>Openingsuren</strong></p>
+			<p>	WOENSDAG 21h-00h<br/>
+				VRIJDAG 21h-4h<br/>
+				ZATERDAG 21h-4h</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-1">	
+		</div>
+		<div class="col-md-11">
+			<h1>Evenementen</h1>
+		</div>
+	</div>
+
+	<div><%= image_tag "brushstroke.png" %></div>
+
+	 <% @events.each do |event| %>
+       	<div class="row">
+			<div class="col-sm-1">	
+			</div>
+			<div class="col-sm-2">
+				<p><%= event.date.strftime('%d/%m') %></p>
+			</div>
+			<div class="col-sm-7">
+				<p><%= event.title %></p>
+			</div>
+			<% unless event.cahiercard.blank? && event.price.blank? %>
+			<div class="col-md-2">
+       			<p>€<%= event.cahiercard.round %>/€<%= event.price.round %></p>
+      		</div>
+      		<% else %>
+      		<div class="col-md-2">
+       			<p>GRATIS!</p>
+      		</div>	
+      		<% end %>	
+		</div>
+    <% end %>
+</div>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+   	<!-- Indicators -->
+	<ol class="carousel-indicators">
+	   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	   <li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+		<li data-target="#myCarousel" data-slide-to="3"></li>
+	</ol>
+
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner" role="listbox">
+	    <div class="item active">
+	    	<%= image_tag "DSC_0736.JPG" %>
+	    </div>
+
+	    <div class="item">
+	    	<%= image_tag "DSC_0738.JPG" %>
+	    </div>
+
+	    <div class="item">
+	    	<%= image_tag "DSC_0740.JPG" %>
+	    </div>
+
+	    <div class="item">
+	    	<%= image_tag "DSC_0749.JPG" %>
+	    </div>
+	</div>
+</div>
