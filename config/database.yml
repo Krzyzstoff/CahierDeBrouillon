@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: cahierdebrouillon_production
-  username: rails
-  password: s2HpqquiTO
+  username: cahierdebrouillon
+  password: <%= ENV['CAHIERDEBROUILLON_DATABASE_PASSWORD'] %>
