@@ -1,5 +1,5 @@
 # Change these
-server '188.166.84.143', port: 22, roles: [:web, :app, :db], primary: true
+server '178.62.196.35', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:Krzyzstoff/CahierDeBrouillon.git'
 set :application,     'CahierDeBrouillon'
