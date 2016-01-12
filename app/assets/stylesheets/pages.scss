@@ -45,11 +45,8 @@
 }
 
 // AGENDA
-
-.vCenter {
-	cursor: pointer; 
-	cursor: hand;
-	text-align: center;
+.agenda {
+	padding-top: 60px;
 }
 
 .a_Affiche, .hAffiche{
@@ -95,4 +92,32 @@ padding: 0 1.85% !important;
 
 .owl-maand, .prev, .next {
 	cursor: pointer;
+}
+
+.vCenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.schuin {
+	background-color: #000000; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #000000 0%, #000000 50%, #ffffff 50%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#000000), color-stop(50%,#000000), color-stop(50%,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, #000000 0%,#000000 50%,#ffffff 50%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, #000000 0%,#000000 50%,#ffffff 50%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, #000000 0%,#000000 50%,#ffffff 50%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(135deg, #000000 0%,#000000 50%,#ffffff 50%,#ffffff 100%);
+}
+
+.zwart {
+	background-color: #000;
+}
+.wit {
+	background-color: #fff;
+	color: #000;
+}
+
+.event {
+	margin: auto 5%;
 }
