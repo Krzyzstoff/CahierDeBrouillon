@@ -49,4 +49,50 @@
 .vCenter {
 	cursor: pointer; 
 	cursor: hand;
+	text-align: center;
+}
+
+.a_Affiche, .hAffiche{
+	 position: absolute;
+}
+
+.a_Affiche { 
+left: 0;
+right: 0;
+top: 50% !important;
+transform: translate(0,-50%); // IE9
+transform: translate3d(0,-50%,0); // Modern Browsers - better performance
+margin: 0 auto;
+padding: 0 1.85% !important;
+}
+
+.tba {
+	padding: auto 10px;
+}
+
+.hAffiche {
+	top: 0;
+}
+
+.hAffiche  {
+	opacity: 0;
+
+}
+
+.hAffiche:hover {
+	opacity: 1;
+}
+
+.hAffiche h1 {
+	position: absolute;
+	top: 50% !important;
+	left: 25%;
+	transform: translate(0,-50%); // IE9
+	transform: translate3d(0,-50%,0); // Modern Browsers - better performance
+	margin: 0 auto;
+	color: #fff;
+}
+
+.owl-maand, .prev, .next {
+	cursor: pointer;
 }
