@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: cahierdebrouillon_production
-  username: rails
+  username: deploy
   password: s2HpqquiTO
