@@ -82,4 +82,4 @@ production:
   <<: *default
   database: cahierdebrouillon_production
   username: rails
-  password: <%= ENV['CAHIERDEBROUILLON_DATABASE_PASSWORD'] %>
+  password: s2HpqquiTO
