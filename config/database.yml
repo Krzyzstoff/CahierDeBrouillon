@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: CahierDeBrouillon_production
+  database: cahierdebrouillon_production
   username: rails
   password: s2HpqquiTO
