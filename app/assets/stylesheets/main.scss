@@ -45,8 +45,8 @@ h2 {
 /* NAV */
 
 @font-face {
-  font-family: "Apercu-Bold";
-  src:url('apercu-bold-webfont.ttf') format("truetype");
+  font-family: "apercu-bold-webfont";
+  src:url('/assests/apercu-bold-webfont.ttf') format("truetype");
 }
 
 .navbar-nav{
@@ -68,7 +68,7 @@ h2 {
     padding: 0 25px;
     color: #000;
     font-size: 18px;
-    font-family: "Apercu-Bold";
+    font-family: "apercu-bold-webfont";
 } 
 
 .navbar-nav>li>a:hover {
