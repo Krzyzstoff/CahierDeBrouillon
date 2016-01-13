@@ -25,7 +25,7 @@ $(document).ready(function(){
    $(".owl-agenda").owlCarousel({
         loop:false,
         items: 7,
-        margin: 10,
+        margin: 5,
         center: true,
         URLhashListener:true,
         autoplayHoverPause:true,

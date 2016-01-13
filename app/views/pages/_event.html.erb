@@ -1,0 +1,31 @@
+<div  class="row row-eq-height event">
+
+	<div class="col-sm-9 zwart">
+		<h1><%= event.title %></h1>
+		</div>
+		<% unless event.cahiercard.blank? && event.price.blank? %>
+			<div class="col-sm-1 zwart">
+       			<p>€<%= event.cahiercard.round %>/€<%= event.price.round %></p>
+      		</div>
+      		<% else %>
+      		<div class="col-sm-1 zwart">
+       			<p>GRATIS!</p>
+      		</div>	
+      		<% end %>	
+	<div class="col-sm-2 wit date">
+		<h3><%= event.date.strftime('%d/%m') %></h3>
+	</div>
+
+</div>
+
+<div class="row row-eq-height event">
+
+	<div class="col-md-12 wit">
+		<%= simple_format(event.description) if event.description? %>
+	</div>
+
+</div>
+
+<br>
+<br>
+<br>
