@@ -23,14 +23,14 @@
     <div id="wrap" class="white">
   <% elsif current_page?(controller:'/albums') %>
     <div id="wrap" class="white">
-  <% elsif %>
-    <div id="wrap">
+  <% else %>
+    <div id="wrap" class="black">
   <% end %>
 
 	<main role="main">
 		<%= yield %>
 	</main>
-</div>
+    </div>
   <div class="footer">
     <%= render 'layouts/footer' %>
   </div>

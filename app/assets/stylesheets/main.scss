@@ -6,12 +6,10 @@
 
 html, body{
   height: 100%;
-  background-image: image-url('Background.jpg');
 }
 
 body {
   height: calc(100% - 80px) !important;
-
 }
 
 main {
@@ -43,6 +41,10 @@ h2 {
 
 .white {
   background-image: image-url('BackgroundWhite.jpg');
+}
+
+.black {
+  background-image: image-url('Background.jpg');
 }
 
 /* NAV */
