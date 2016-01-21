@@ -74,7 +74,7 @@ namespace :deploy do
   end
 
   task :override_linked_dirs do
-  set :linked_dirs, %w(public/uploads)
+  set :linked_dirs, %w(public/uploads public/assets)
 end
 # Execute *after* capistrano-rails, so dirs won't be further altered
 after "deploy:set_linked_dirs", :override_linked_dirs
