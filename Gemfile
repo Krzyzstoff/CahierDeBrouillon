@@ -36,7 +36,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
 gem 'bootstrap-wysihtml5-rails'
 gem 'carrierwave'
-gem 'carrierwave-ftp', :require => 'carrierwave/storage/ftp/all' # FTP only
+gem "mini_magick"
 gem 'masonry-rails'
 gem 'magnific-popup-rails'
 gem 'modernizr-rails'
@@ -61,4 +61,3 @@ group :development do
 end
 
 gem 'puma'
-

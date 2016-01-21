@@ -14,7 +14,7 @@
 
 .box img {
 	-webkit-transition: all 0.2s ease-in-out;
-	-moz-transition: all 0.2s ease-in-out; 
+	-moz-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
 
@@ -27,8 +27,4 @@ transform: scale(1.2,1.2);
 html {
     margin-right: 0 !important;
     overflow: visible !important;
-}
-
-#photo_photo {
-	color: #fff;
 }
