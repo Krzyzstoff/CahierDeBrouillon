@@ -32,7 +32,7 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 
 ## Linked Files & Directories (Default None):
 # set :linked_files, %w{config/database.yml}
-set :linked_dirs, fetch(:linked_dirs).push("public/uploads")
+# set :linked_dirs,  %w{public/uploads}
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
@@ -72,6 +72,12 @@ namespace :deploy do
       invoke 'puma:restart'
     end
   end
+
+  task :override_linked_dirs do
+  set :linked_dirs, %w(public/uploads)
+end
+# Execute *after* capistrano-rails, so dirs won't be further altered
+after "deploy:set_linked_dirs", :override_linked_dirs
 
   before :starting,     :check_revision
   after  :finishing,    :compile_assets
