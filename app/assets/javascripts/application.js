@@ -12,12 +12,79 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-sprockets
+
 //= require bootstrap-wysihtml5
+
+//= require modernizr.custom.17475
+
+//= require masonry/jquery.masonry
+//= require masonry/jquery.event-drag
+//= require masonry/jquery.imagesloaded.min
+//= require masonry/jquery.infinitescroll.min
+//= require masonry/modernizr-transitions
+//= require masonry/box-maker
+//= require masonry/jquery.loremimages.min
+//= require isotope/jquery.isotope
+
+//= require magnific-popup
+
+//= require bootstrap-sprockets
 
 //= require_tree .
 
 $(document).ready(function(){
+$('.popup-gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    closeOnContentClick: true,
+    gallery: {
+      enabled: true,
+      navigateByImgClick: false,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+    },
+    mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+
+  zoom: {
+    enabled: true, // By default it's false, so don't forget to enable it
+
+    duration: 300, // duration of the effect, in milliseconds
+    easing: 'ease-in-out', // CSS transition easing function
+
+    // The "opener" function should return the element from which popup will be zoomed in
+    // and to which popup will be scaled down
+    // By defailt it looks for an image tag:
+    opener: function(openerElement) {
+      // openerElement is the element on which popup was initialized, in this case its <a> tag
+      // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+      return openerElement.is('img') ? openerElement : openerElement.find('img');
+    }
+  }
+  });
+
+  // $('.box').magnificPopup({
+  //   delegate: 'a', // child items selector, by clicking on it popup will open
+  //   type: 'image',
+  //   closeOnContentClick: true,
+  //   // other options
+  // });
+
+  $('#masonry-container').masonry({
+    itemSelector: '.box',
+    isAnimated: !Modernizr.csstransitions,
+    isFitWidth: true,
+  });
+
+
+  $('#masonry-container').imagesLoaded( function() {
+    $('#masonry-container').masonry();
+  });
+
+  
 	$('.wysihtml5').each(function(i, elem) {
       $(elem).wysihtml5();
    });
@@ -49,7 +116,8 @@ $(document).ready(function(){
   });
   $(".prev").click(function(){
     owl.trigger('prev.owl.carousel');
-  });	
+  });
+
 })
 
 //= require turbolinks

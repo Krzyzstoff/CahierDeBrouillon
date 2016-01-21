@@ -37,6 +37,9 @@ gem 'devise'
 gem 'bootstrap-wysihtml5-rails'
 gem 'carrierwave'
 gem 'carrierwave-ftp', :require => 'carrierwave/storage/ftp/all' # FTP only
+gem 'masonry-rails'
+gem 'magnific-popup-rails'
+gem 'modernizr-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

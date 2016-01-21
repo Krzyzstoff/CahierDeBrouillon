@@ -42,7 +42,7 @@
             </div>
             <div class="photoThumb">
               <% album.photos.limit(1).each do |photo| %>
-                <%= image_tag(photo.photo) %>
+                <%= image_tag(photo.photo, :class => "img-responsive") %>
               <% end %>
             </div>
             <div class="photoTitle">

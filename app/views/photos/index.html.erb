@@ -1,2 +1,29 @@
-<h1>Photos#index</h1>
-<p>Find me in app/views/photos/index.html.erb</p>
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-11">
+      <h1><%= @album.title %></h1>
+      <% if user_signed_in? %>
+      <%= form_for([@album, @photo], :html => {:multipart => true}) do |f| %>
+        <%= f.label "foto's toevoegen" %>
+        <%= f.file_field :photo, :multiple => true, name: "photo[photo][]" %>
+
+        <%= f.submit 'Opslaan', :class => 'btn btn-default' %> 
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-11"> 
+    <div id="masonry-container" class="popup-gallery transitions-enabled infinite-scroll clearfix">
+        <% @photos.each do |photo| %>
+            <%= link_to image_tag(photo.photo), photo.photo_url, :class => "box col2" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>

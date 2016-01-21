@@ -1,2 +1,23 @@
-<h1>Albums#show</h1>
-<p>Find me in app/views/albums/show.html.erb</p>
+<div class="container">
+	<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-11">
+    	<h1><%= @album.title if @album.title? %></h1>
+            <h1><%= @album.id if @album.id? %></h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-11">
+      <% @photos.each do |d| %>
+      
+        <%= image_tag d.photo %>
+        
+        <% end %>
+
+         <%= link_to 'foto toevoegen', new_album_photo_path(album_id: @album), :class => 'btn btn-default' %>   
+    </div>
+  </div>
+
+</div>

@@ -5,3 +5,36 @@
 #album_date_1i, #album_date_2i, #album_date_3i {
 	color: #000;
 }
+
+.photoDate {
+	display: block;
+	color: #000;
+	width: 100%;
+	background-color: #5ba200;
+	text-align: center;
+}
+
+.photoThumb {
+	overflow: hidden;
+}
+
+.photoThumb img {
+
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out; 
+	transition: all 0.2s ease-in-out;
+}
+
+.photoThumb img:hover {
+-webkit-transform: scale(1.2,1.2);
+-moz-transform: scale(1.2,1.2);
+transform: scale(1.2,1.2);
+}
+
+.photoTitle {
+	display: block;
+	color: #000;
+	background-color: #fff;
+	width: 100%;
+	text-align: center;
+}

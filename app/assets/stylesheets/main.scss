@@ -16,7 +16,7 @@ body {
 main {
   color: #fff;
   font-family: 'Futura';
-  font-size: 14pt;
+  font-size: 12pt;
   width: 100%;
   margin-top: 80px; // accommodate the navbar
   padding: 0 0 150px 0;
@@ -24,6 +24,14 @@ main {
 }
 
 
+img {
+  @extend .img-responsive ;
+  margin: 0 auto;
+  }
+
+h1 {
+  font-size: 30px;
+}
 
 h2 {
   margin-top: 0 !important;
