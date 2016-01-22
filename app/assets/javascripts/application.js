@@ -84,23 +84,35 @@ $('.popup-gallery').magnificPopup({
     $('#masonry-container').masonry();
   });
 
-  
+
 	$('.wysihtml5').each(function(i, elem) {
       $(elem).wysihtml5();
    });
 
    $(".owl-agenda").owlCarousel({
         loop:false,
-        items: 7,
         margin: 5,
         center: true,
         URLhashListener:true,
         autoplayHoverPause:true,
         startPosition: 'URLHash',
-    }); 
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            600:{
+                items:3,
+            },
+            1000:{
+                items:7,
+                loop:false
+            }
+        }
+    });
 
     var owl = $(".owl-maand");
- 
+
     owl.owlCarousel({
         items: 1,
         center:true,
@@ -109,7 +121,7 @@ $('.popup-gallery').magnificPopup({
         autoplayHoverPause:true,
         startPosition: 'URLHash'
     });
- 
+
   // Custom Navigation Events
   $(".next").click(function(){
     owl.trigger('next.owl.carousel');
