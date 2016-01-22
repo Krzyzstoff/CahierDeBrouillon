@@ -1,7 +1,7 @@
 <div class="container">
-	
+
 	<div class="row agenda">
-		<div class="col-md-1">	
+		<div class="col-md-1">
 		</div>
 		<div class="col-md-11 agenda">
 			<div class="owl-carousel owl-agenda">
@@ -22,8 +22,8 @@
 
 	<br>
 
-	<div class="row">
-		<div class="col-md-4"></div>	
+	<div class="row maand-row">
+		<div class="col-md-4"></div>
 		<div class="col-md-1 vCenter">
  			<a class="prev"><%= image_tag "witL.png" %></a>
 		</div>
@@ -49,11 +49,11 @@
 	</div>
 
 	<div class="row">
-		<div class="col-md-4"></div>	
+		<div class="col-md-4"></div>
 		<div class="col-md-1 vCenter">
 			<%= link_to image_tag("witL.png"), {:year => (@year.to_i - 1)} %>
 		</div>
-		<div class="col-md-2 vCenter" style="text-align: center">
+		<div class="col-md-2 vCenter jaar-col" style="text-align: center">
 			<h2><%= @year %></h2>
 		</div>
 		<div class="col-md-1 vCenter">
@@ -72,4 +72,3 @@
 <br>
 <br>
 </div>
-

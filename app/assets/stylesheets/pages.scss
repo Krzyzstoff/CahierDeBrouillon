@@ -92,8 +92,12 @@ width: 100%;
 
 .owl-maand, .prev, .next {
 	cursor: pointer;
+	max-width: 150px;
 }
 
+.jaar-col {
+	min-width: 150px;
+}
 .vCenter {
     display: inline-block;
     vertical-align: middle;
