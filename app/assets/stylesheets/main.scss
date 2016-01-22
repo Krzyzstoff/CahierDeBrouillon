@@ -122,10 +122,13 @@ h2 {
   cursor: hand;
 }
 
-.iconbar {
-  background-color: #ccc;
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #333;
 }
 
+.navbar-inverse .navbar-toggle:hover .icon-bar, .navbar-inverse .navbar-toggle:focus .icon-bar{
+  background-color: #fff;
+}
 
 /* FOOTER */
 
