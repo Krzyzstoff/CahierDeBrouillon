@@ -77,7 +77,7 @@ h2 {
     color: #000;
     font-size: 18px;
     font-family: "apercu-bold-webfont";
-} 
+}
 
 .navbar-nav>li>a:hover {
     color: #000 !important;
@@ -89,20 +89,20 @@ h2 {
     min-height: 10px;
     background:
         linear-gradient(-135deg, #fff 5px, transparent 5px),
-        linear-gradient(135deg, #fff 5px, transparent 5px);  
+        linear-gradient(135deg, #fff 5px, transparent 5px);
     background-position: left bottom;
     background-repeat: repeat-x;
     background-size:
       10px 10px,
       10px 10px;
-    
+
     position: fixed;
     top: 80px !important;
     z-index: 100;
 }
 
 .active > a{
-    text-decoration: underline; 
+    text-decoration: underline;
     background-color: #FFF !important;
     color: #000 !important;
 }
@@ -118,8 +118,12 @@ h2 {
 }
 
 .nieuwsbrief {
-  cursor: pointer; 
+  cursor: pointer;
   cursor: hand;
+}
+
+.iconbar {
+  background-color: #ccc;
 }
 
 
@@ -137,7 +141,7 @@ h2 {
     min-height: 10px;
     background:
         linear-gradient(-45deg, #fff 5px, transparent 5px),
-        linear-gradient(45deg, #fff 5px, transparent 5px);  
+        linear-gradient(45deg, #fff 5px, transparent 5px);
     background-position: left bottom;
     background-repeat: repeat-x;
     background-size:
@@ -160,7 +164,7 @@ h2 {
 	color: #fff;
 	text-align: center;
 	line-height: 60px;
-	font-size: 9px; 
+	font-size: 9px;
   background-image: image_url('Background.jpg')
 }
 
