@@ -99,7 +99,7 @@ $('.popup-gallery').magnificPopup({
         responsiveClass:true,
         responsive:{
             0:{
-                items:1,
+                items:2,
             },
             600:{
                 items:3,
@@ -130,29 +130,8 @@ $('.popup-gallery').magnificPopup({
     owl.trigger('prev.owl.carousel');
   });
 
-  var touch = window.ontouchstart
-              || (navigator.MaxTouchPoints > 0)
-              || (navigator.msMaxTouchPoints > 0);
-
-  if (touch) { // remove all :hover stylesheets
-      try { // prevent crash on browsers not supporting DOM styleSheets properly
-          for (var si in document.styleSheets) {
-              var styleSheet = document.styleSheets[si];
-              if (!styleSheet.rules) continue;
-
-              for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
-                  if (!styleSheet.rules[ri].selectorText) continue;
-
-                  if (styleSheet.rules[ri].selectorText.match(':hover')) {
-                      styleSheet.deleteRule(ri);
-                  }
-              }
-          }
-      } catch (ex) {}
-  }
-
-
 })
+
 
 
 //= require turbolinks
