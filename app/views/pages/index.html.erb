@@ -1,27 +1,38 @@
 <div class="container">
 	<div class="row info">
-		<div class="col-md-1">	
+		<div class="col-md-1">
 		</div>
 		<div class="col-md-5">
-			<p><strong>Cahier de Brouillon</strong></p>
+			<h3>Cahier de Brouillon</h3>
 			<p>is een muziekcafé dat al sinds 1981 muzikale en culturele prikkels stuurt doorheen gans de Noorderkempen. We bieden optredens van diverse genres zoals rock, pop, hardcore punk, hiphop, electronisch, jazz, ska en reggae tot Antilliaans en Afrikaans.</p>
 			<p>Het café is bovendien een uitstekende locatie voor fuiven. Check onze <strong>CARTE BLANCHE</strong>.</p>
 		</div>
-		<div class="col-md-1">	
+		<div class="col-md-1">
 		</div>
 		<div class="col-md-5">
-			<p><strong>Openingsuren</strong></p>
-			<p>	WOENSDAG 21h-00h<br/>
-				VRIJDAG 21h-4h<br/>
-				ZATERDAG 21h-4h</p>
+			<h3>Openingsuren</h3>
+			<table style="width:50%">
+ 				<tr>
+	 				<td>Woensdag</td>
+	 				<td>21h-00h</td>
+ 				</tr>
+				<tr>
+	 				<td>Vrijdag</td>
+	 				<td>21h-4h</td>
+ 				</tr>
+				<tr>
+	 				<td>Zaterdag</td>
+	 				<td>21h-4h</td>
+ 				</tr>
+			</table>
 		</div>
 	</div>
 
 	<div class="row">
-		<div class="col-md-1">	
+		<div class="col-md-1">
 		</div>
 		<div class="col-md-11">
-			<h1>Evenementen</h1>
+			<h3>Evenementen</h3>
 		</div>
 	</div>
 
@@ -31,7 +42,7 @@
 
 	 <% @events.each do |event| %>
        	<div class="row">
-			<div class="col-sm-1">	
+			<div class="col-sm-1">
 			</div>
 			<div class="col-sm-2">
 				<p><%= event.date.strftime('%d/%m') %></p>
@@ -46,8 +57,8 @@
       		<% else %>
       		<div class="col-md-2">
        			<p>GRATIS!</p>
-      		</div>	
-      		<% end %>	
+      		</div>
+      		<% end %>
 		</div>
     <% end %>
 </div>
