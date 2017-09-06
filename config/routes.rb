@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/agenda' => 'pages#agenda'
   get "/fetch_event" => 'pages#from_agenda', as: 'fetch_event'
   get '/contact' => 'pages#contact'
+  get '/brouillon' => 'pages#brouillon'
 
   get '/inteam' => 'inteam#index'
 
